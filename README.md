@@ -4,7 +4,6 @@
 [![Kafka](https://img.shields.io/badge/Kafka-3.x-orange.svg)](https://kafka.apache.org/)
 [![Spark](https://img.shields.io/badge/Spark-3.5-red.svg)](https://spark.apache.org/)
 [![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 SmartFlow is an end-to-end Big Data & Machine Learning platform for real-time Cairo city traffic telemetry ingestions, schema enrichment, historical storage in HDFS, aggregated batch reports, ML predictions, and visualization.
 
