@@ -1,4 +1,4 @@
-# SmartFlow — Smart City Traffic Management & Ride Demand Prediction Platform
+# 🚦 SmartFlow — Smart City Traffic Management & Ride Demand Prediction Platform
 
 [![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 [![Kafka](https://img.shields.io/badge/Kafka-3.x-orange.svg)](https://kafka.apache.org/)
