@@ -1,0 +1,16 @@
+road_id,road_name,road_type,length_km,num_lanes,speed_limit_kmh,city
+1,Tahrir Square,Urban,9.9,4,50,Cairo
+2,Corniche El Nil,Urban,12.3,3,60,Cairo
+3,Ring Road Cairo,Highway,21.3,4,90,Cairo
+4,Salah Salem,Highway,93.9,3,80,Cairo
+5,October 6 Bridge,Urban,14.3,3,60,Cairo
+6,Suez Road,Highway,22.0,4,100,Cairo
+7,Nasr Road,Urban,6.5,3,60,Cairo
+8,Abbas El Akkad,Urban,2.0,2,50,Cairo
+9,Hassan El Maamoun,Urban,12.0,2,50,Cairo
+10,El Haram Street,Urban,7.2,3,60,Cairo
+11,Pyramids Road,Urban,4.7,3,60,Cairo
+12,Mohandessin Street,Urban,10.4,2,50,Cairo
+13,Zamalek Bridge,Urban,2.7,2,50,Cairo
+14,Maadi Road,Highway,92.8,3,80,Cairo
+15,Heliopolis Main Street,Urban,6.6,3,60,Cairo

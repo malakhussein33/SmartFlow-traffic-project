@@ -1,0 +1,20 @@
+# Optimized Deployment Dependencies for Streamlit Cloud
+# (Excludes heavy data engineering packages like PySpark and Kafka,
+# and removes strict pins to allow instant wheel downloads on newer Python runtimes)
+
+streamlit>=1.35.0
+plotly>=5.22.0
+folium>=0.16.0
+streamlit-folium>=0.20.0
+SQLAlchemy>=2.0.0
+psycopg2-binary>=2.9.0
+pandas>=2.0.0
+numpy>=1.25.0
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+python-dotenv>=1.0.1
+pyyaml>=6.0.1
+requests>=2.31.0
+faker>=24.0.0
+colorlog>=6.8.0
+rich>=13.7.0

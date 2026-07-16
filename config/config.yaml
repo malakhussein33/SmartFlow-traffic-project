@@ -1,0 +1,156 @@
+kafka:
+  bootstrap_servers: "localhost:29092"
+  topics:
+    traffic: "traffic-stream"
+    weather: "weather-stream"
+    prediction: "prediction-stream"
+    dlq: "dead-letter-stream"
+  producer:
+    acks: "all"
+    retries: 5
+    retry_backoff_ms: 1000
+    linger_ms: 10
+    compression_type: "gzip"
+  consumer:
+    group_id: "smartcity-group"
+    auto_offset_reset: "earliest"
+    enable_auto_commit: false
+    max_poll_records: 100
+
+spark:
+  master: "local[*]"
+  app_name: "SmartCityPlatform"
+  streaming_interval: 5
+  checkpoint_dir: "./spark/checkpoints"
+  log_level: "INFO"
+  executor_memory: "512M"
+  driver_memory: "512M"
+
+postgres:
+  host: "localhost"
+  port: 5432
+  db: "smartcity"
+  user: "postgres"
+  password: "postgres"
+  pool_size: 10
+  max_overflow: 20
+  pool_timeout: 30
+
+hdfs:
+  namenode: "localhost"
+  port: 9870
+  user: "hadoop"
+  base_path: "/smartcity"
+  replication: 1
+  block_size: 134217728
+
+data:
+  raw_dir: "./data/raw"
+  processed_dir: "./data/processed"
+  sample_dir: "./data/sample"
+  parquet_compression: "SNAPPY"
+
+ml:
+  model_dir: "./ml/models"
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+  algorithms:
+    - "random_forest"
+    - "gradient_boosting"
+    - "linear_regression"
+    - "xgboost"
+
+dashboard:
+  title: "🚦 SmartFlow - Smart City Traffic Platform"
+  port: 8501
+  theme: "dark"
+  refresh_interval: 15
+
+simulation:
+  num_sensors: 20
+  update_interval: 1
+  city: "Cairo"
+  roads:
+    - name: "Tahrir Square"
+      lat: 30.0444
+      lon: 31.2357
+      speed_limit: 50
+      lanes: 4
+    - name: "Corniche El Nil"
+      lat: 30.0400
+      lon: 31.2280
+      speed_limit: 60
+      lanes: 3
+    - name: "Ring Road Cairo"
+      lat: 30.0120
+      lon: 31.2050
+      speed_limit: 90
+      lanes: 4
+    - name: "Salah Salem"
+      lat: 30.0650
+      lon: 31.2750
+      speed_limit: 80
+      lanes: 3
+    - name: "October 6 Bridge"
+      lat: 30.0480
+      lon: 31.2290
+      speed_limit: 60
+      lanes: 3
+    - name: "Suez Road"
+      lat: 30.0950
+      lon: 31.3900
+      speed_limit: 100
+      lanes: 4
+    - name: "Nasr Road"
+      lat: 30.0700
+      lon: 31.3200
+      speed_limit: 60
+      lanes: 3
+    - name: "Abbas El Akkad"
+      lat: 30.0750
+      lon: 31.3400
+      speed_limit: 50
+      lanes: 2
+    - name: "Hassan El Maamoun"
+      lat: 30.0800
+      lon: 31.3500
+      speed_limit: 50
+      lanes: 2
+    - name: "El Haram Street"
+      lat: 30.0030
+      lon: 31.1850
+      speed_limit: 60
+      lanes: 3
+    - name: "Pyramids Road"
+      lat: 30.0090
+      lon: 31.1900
+      speed_limit: 60
+      lanes: 3
+    - name: "Mohandessin Street"
+      lat: 30.0550
+      lon: 31.2000
+      speed_limit: 50
+      lanes: 2
+    - name: "Zamalek Bridge"
+      lat: 30.0570
+      lon: 31.2200
+      speed_limit: 50
+      lanes: 2
+    - name: "Maadi Road"
+      lat: 29.9600
+      lon: 31.2600
+      speed_limit: 80
+      lanes: 3
+    - name: "Heliopolis Main Street"
+      lat: 30.1000
+      lon: 31.3300
+      speed_limit: 60
+      lanes: 3
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_rotation: "D"
+  max_bytes: 10485760
+  backup_count: 7
